@@ -9,41 +9,34 @@ import {
   StatusBar,
 } from 'react-native';
 
-import {
-  Header,
-  LearnMoreLinks,
-  Colors,
-  DebugInstructions,
-  ReloadInstructions,
-} from 'react-native/Libraries/NewAppScreen';
-
 export default class App extends React.Component {
   styles = StyleSheet.create({
     MainContainer: {
       flex: 1,
       justifyContent: 'center',
       alignItems: 'center',
-      backgroundColor: Colors.black,
-    },
-    scrollView: {
-      backgroundColor: Colors.black,
+      backgroundColor: 'black',
     },
     sectionContainer: {
-      marginTop: 32,
-      paddingHorizontal: 24,
+      margin: 24,
       borderWidth: 8,
-      borderColor: Colors.white,
+      borderColor: 'white',
+      height: 200,
+      width: 200,
+      borderRadius: 200,
     },
     sectionTitle: {
-      fontSize: 24,
+      fontSize: 96,
       fontWeight: '600',
-      color: Colors.white,
+      color: 'white',
+      textAlign: 'center',
+      marginTop: 16,
     },
   });
 
   state = {
     countVal: 0,
-  }
+  };
 
   increment = () => {
     this.setState(state => {
@@ -52,7 +45,7 @@ export default class App extends React.Component {
       this.state.countVal += 1;
       return state;
     });
-  }
+  };
 
   decrement = () => {
     this.setState(state => {
@@ -61,18 +54,18 @@ export default class App extends React.Component {
       this.state.countVal -= 1;
       return state;
     });
-  }
+  };
 
   render() {
     return (
       <>
         <StatusBar barStyle="dark-content" />
         <SafeAreaView style={this.styles.MainContainer}>
-          <ScrollView
-            contentInsetAdjustmentBehavior="automatic"
-            style={this.styles.scrollView}>
+          <ScrollView contentInsetAdjustmentBehavior="automatic">
             <View style={this.styles.sectionContainer}>
-              <Text style={this.styles.sectionTitle}>{this.state.countVal}</Text>
+              <Text style={this.styles.sectionTitle}>
+                {this.state.countVal}
+              </Text>
             </View>
             <UpButton title="+" onPress={this.increment}/>
             <UpButton title="-" onPress={this.decrement}/>
