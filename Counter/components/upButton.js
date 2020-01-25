@@ -26,7 +26,9 @@ export default class UpButton extends React.Component {
     return (
       <TouchableOpacity onPress={this.props.onPress}>
         <View style={[this.styles.button, this.props.style]}>
-          <Text style={[this.styles.title, this.props.titleStyle]}>{this.props.title}</Text>
+          <Text style={[this.styles.title, this.props.titleStyle]}>
+            {this.props.title}
+          </Text>
         </View>
       </TouchableOpacity>
     );

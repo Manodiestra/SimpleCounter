@@ -41,9 +41,25 @@ export default class App extends React.Component {
     },
   });
 
+  state = {
+    countVal: 0,
+  }
+
   increment = () => {
-    this.setState((state) => {
-      console.log("increment button");
+    this.setState(state => {
+      console.log(state);
+      console.log(state.countVal);
+      this.state.countVal += 1;
+      return state;
+    });
+  }
+
+  decrement = () => {
+    this.setState(state => {
+      console.log(state);
+      console.log(state.countVal);
+      this.state.countVal -= 1;
+      return state;
     });
   }
 
@@ -56,10 +72,10 @@ export default class App extends React.Component {
             contentInsetAdjustmentBehavior="automatic"
             style={this.styles.scrollView}>
             <View style={this.styles.sectionContainer}>
-              <Text style={this.styles.sectionTitle}>Step One</Text>
+              <Text style={this.styles.sectionTitle}>{this.state.countVal}</Text>
             </View>
             <UpButton title="+" onPress={this.increment}/>
-            <UpButton title="-" onPress={this.increment}/>
+            <UpButton title="-" onPress={this.decrement}/>
           </ScrollView>
         </SafeAreaView>
       </>
