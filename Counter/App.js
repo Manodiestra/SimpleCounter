@@ -26,7 +26,7 @@ export default class App extends React.Component {
       borderRadius: 200,
     },
     sectionTitle: {
-      fontSize: 96,
+      fontSize: 88,
       fontWeight: '600',
       color: 'white',
       textAlign: 'center',
@@ -40,8 +40,6 @@ export default class App extends React.Component {
 
   increment = () => {
     this.setState(state => {
-      console.log(state);
-      console.log(state.countVal);
       this.state.countVal += 1;
       return state;
     });
@@ -49,8 +47,6 @@ export default class App extends React.Component {
 
   decrement = () => {
     this.setState(state => {
-      console.log(state);
-      console.log(state.countVal);
       this.state.countVal -= 1;
       return state;
     });

@@ -16,7 +16,7 @@ export default class UpButton extends React.Component {
       borderColor: 'white',
     },
     title: {
-      fontSize: 64,
+      fontSize: 56,
       alignSelf: 'center',
       color: 'white',
     },
