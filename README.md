@@ -21,8 +21,11 @@ Follow the CLI guide, not the Expo guide.
 ## How to run this project ##
 
 ```cd Counter```
+
 ```npm i```
+
 ```npm start```
+
 ```npm run android``` (in a separate terminal)
 
 ## Contribution guidelines ##
