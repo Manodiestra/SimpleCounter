@@ -6,6 +6,8 @@ Simple counter is a simple app that will count up and down.
 This was a simple project I used to learn the basics of
 React Native mobile dev
 
+![App Screenshot](./Counter/screenshots/Counter.png "App Screenshot")
+
 ## Build Requirements
 
 * Java SE 8+ or OpenJDK
